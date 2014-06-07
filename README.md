@@ -1,6 +1,7 @@
 # PaginationAjax
 
-TODO: Write a gem description
+Extremely simple pagination using ajax -- Designed to provide basic pagination functionality using ajax with minimal effort.  
+If you provide a JST(Javascript Template) file and a url to send requests to this gem will essentially do the rest.
 
 ## Installation
 
