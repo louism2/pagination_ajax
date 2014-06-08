@@ -20,17 +20,16 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency('jquery-rails')
+  
+  #spec.add_development_dependency 'rails'
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'actionpack', '~> 4.1.1'
   
   ## Dependencies for testing gem ##
   spec.add_development_dependency "rspec", "~> 2.6"
-  #spec.add_development_dependency "factory_girl_rails"
-  #spec.add_development_dependency "capybara"
   spec.add_development_dependency 'jasmine', '~> 2.0.1'
-  #spec.add_development_dependency 'selenium-webdriver'
-  #spec.add_development_dependency 'database_cleaner'
   
   
 end
