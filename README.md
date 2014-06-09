@@ -65,7 +65,7 @@ By default, even if you don't provide a ```current_page``` value in your hash ar
 ```Ruby
   def get_comments
     offset_value = params[:current_page].to_i*params[:per_page].to_i
-    comments = Comment.offset(offset_value).limit(params[:per_page])
+    comments = Comment.where(:parent_id => params[:parent_id]).offset(offset_value).limit(params[:per_page])
     respond_to do |format|
       format.json {render json: comments}
     end
