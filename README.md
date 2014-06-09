@@ -22,7 +22,7 @@ Once you have installed the gem you need to run the install generator:
     
     rails g pagination_ajax:install
     
-This will look for a javascript file in your assets directory named 'application.js' or 'application.js.coffee' and add several require statements that will load the needed javascript for this gem to work.  
+This will look for a javascript file in your assets directory named ```application.js``` or ```application.js.coffee``` and add several require statements that will load the needed javascript for this gem to work.  
 
 ### Drawing content to the page
 Once you have ran the install generator you can now use the provided ```draw_pagination_links()``` view helper to automatically build pagination links into the page.  This method takes one argument, a hash, and requires that two key/value pairs be present:
@@ -46,7 +46,15 @@ Every key/value pair in the hash that is passed into the ```draw_pagination_link
                            :parent_id => 22, :created_at => "2014-05-23 18:10:00" }
 ```    
 The following html will be rendered to the view:
-
+```Html
+<div class="pagination_container" data-created_at="2014-05-23 18:10:00" data-current_page="0" data-parent_id="22" data-per_page="2" data-template="templates/comment" data-total="20" data-url="/comments/get_comments">
+<span class="link_canvas">
+    <a href="#" class="pagination_link selected_page" data-element_number="0">1</a></span><div class="pagination_canvas">
+</span>
+<div class='pagination_canvas'>
+</div>
+</div>
+```
 
 
 
