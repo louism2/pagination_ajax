@@ -93,7 +93,7 @@ Styling the links is entirely up to you.  Regardless of any what you pass into t
 	</div>
 </div>
 ```
-No styling has been applied to any element so, by default, your links will be a block element that sits at the top left of the containing element.  The links that are generated will all be of class ```pagination_link``` and the currently selected page's link will have an added class of ```selected_page```. 
+No styling has been applied to any element so, by default, your links will be a block element that sits at the top left of the element in which it is contained.  The links that are generated will all be of class ```pagination_link``` and the currently selected page's link will have an added class of ```selected_page```. 
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/pagination_ajax/fork )
