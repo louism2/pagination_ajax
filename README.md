@@ -71,9 +71,10 @@ By default, even if you don't provide a ```current_page``` value in your hash ar
     end
   end
 ```  
-### How is the response from the server handled?
-**IMPORTANT** The response from the server must be an array as the response will be looped through and each contained value will be passed to the JST template.  If you are new to javascript templates I would suggest using Embedded Javascript(EJS) as it provides familiar ERB syntax.  There is an EJS gem so just add the follwing line to your gemfile: ```gem 'ejs'``` and you can now include files inside your ```assets/javascripts/templates``` directory with the file extension ```.jst.ejs``` and write templates that look exactly like ERB:
+#### How is the response from the server handled?
+**IMPORTANT** The response from the server must be an array as the response will be looped through and each contained value will be passed to the JST template you specified.  If you are new to javascript templates I would suggest using Embedded Javascript(EJS) as it provides familiar ERB syntax.  There is an EJS gem so just add the follwing line to your gemfile: ```gem 'ejs'``` and you can now include files inside your ```assets/javascripts/templates``` directory with the file extension ```.jst.ejs``` and write templates that look exactly like ERB:
 ```
+### filename: comment.jst.ejs
 <div class='comment'>
 	<%= comment %> - <%= author %>
 </div>
