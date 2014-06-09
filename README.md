@@ -29,6 +29,8 @@ Once you have ran the install generator you can now use the provided ```draw_pag
 1) A ```template``` argument must present in the passed in hash so the response from the server can be automatically drawn to the page.  By default, rails will convert any files in the ```app/assets/templates``` folder with a ```.jst``` exstention into a javascript template.  Provide the template argument in the format of ```templates/<name_of_file_without_extention>```.  
 2) A ```url``` argument must be present so that the gem knows where to issue the request for data.  Provide this argument in the form of ```/<controller_name>/<action_name>```.
 
+Made a remote change
+
 
 
 
