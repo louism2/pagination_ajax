@@ -27,8 +27,8 @@ This will look for a javascript file in your assets directory named ```applicati
 ### Drawing content to the page
 Once you have ran the install generator you can now use the provided ```draw_pagination_links()``` view helper to automatically build pagination links into the page.  This method takes one argument, a hash, and requires that two key/value pairs be present:
 
-1) A ```template``` argument must present in the passed in hash so the response from the server can be automatically drawn to the page.  By default, rails will convert any files in the ```app/assets/templates``` folder with a ```.jst``` exstention into a javascript template.  Provide the template argument in the format of ```templates/<name_of_file_without_exstention>```.  
-2) A ```url``` argument must be present so that the gem knows where to issue the request for data.  Provide this argument in the form of ```/<controller_name>/<action_name>```.
+1) A ```template``` key/value pair must present in the passed in hash so the response from the server can be automatically drawn to the page.  By default, rails will convert any files in the ```app/assets/templates``` folder with a ```.jst``` exstention into a javascript template.  Provide the template argument in the format of ```templates/<name_of_file_without_exstention>```.  
+2) A ```url``` key/value pair must be present so that the gem knows where to issue the request for data.  Provide this argument in the form of ```/<controller_name>/<action_name>```.
 
 Given just these two arguments, the view helper will create a set of directional links with the text values ```prev``` and ```next```.  But you probably want numbered links rather than just those simple directional links.  This gem will automatically draw numbered links as long as you provide two additional key/value pairs in the hash:
 
@@ -79,9 +79,21 @@ By default, even if you don't provide a ```current_page``` value in your hash ar
 	<%= comment %> - <%= author %>
 </div>
 ```
+The responses will be rendered inside the ```pagination_canvas``` div.  
 
-
-
+### Styling the links
+Styling the links is entirely up to you.  Regardless of any what you pass into the view helper, the "scaffold" of what is rendered to the page will remain the same:
+```Html
+<div class="pagination_container" <!-- all the data attributes will be contained in here --> >
+	<span class="link_canvas">
+   	<!-- The links will be drawn here -->
+	</span>
+	<div class='pagination_canvas'>
+	<!-- The templates will be rendered here --> 
+	</div>
+</div>
+```
+No styling has been applied to any element so, by default, your links will be a block element that sits at the top left of the containing element.  The links that are generated will all be of class ```pagination_link``` and the currently selected page's link will have an added class of ```selected_page```. 
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/pagination_ajax/fork )
