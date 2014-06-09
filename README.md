@@ -1,6 +1,6 @@
 # PaginationAjax
 
-Extremely simple pagination using ajax -- Designed to provide basic pagination functionality using ajax with minimal effort.
+Extremely simple pagination using ajax -- Designed to provide basic pagination functionality using ajax with minimal effort.  
 
 ## Installation
 
