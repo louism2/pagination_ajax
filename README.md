@@ -17,7 +17,7 @@ Or install it yourself as:
     $ gem install pagination_ajax
 
 ## Usage
-### Installation    
+### Setup 
 Once you have installed the gem you need to run the install generator:
     
     rails g pagination_ajax:install
@@ -35,7 +35,7 @@ Given just these two arguments, the view helper will create a set of directional
 1) A ```per_page``` argument. And 
 2) a ```total``` argument.
 
-These two values will be used to determine the total number of pages that will be needed to display your content and will create the pagination links accordingly.  If the number of pages needed to display all the data is greater than seven, the gem will truncate the links so that only the first and last pages as well as two pages in either direction of the current page are visible.
+These two values will be used to determine the total number of pages that will be needed to display your content and will create the pagination links accordingly.  If the number of pages needed to display all the data is greater than seven, the gem will truncate the links so that only the first and last pages, as well as two pages in either direction of the current page, are visible.
 
 #### What gets sent to the server when someone clicks a pagination link?
 Every key/value pair in the hash that is passed into the ```draw_pagination_links()``` helper method will be added to the container div of what is drawn to the page as a html data attribute, all of which will be sent to the sever each time a pagination link is clicked.  So, given a hash of the following values:
