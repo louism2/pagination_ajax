@@ -9,10 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["louism2"]
   spec.email         = ["louiscmancini@gmail.com"]
   spec.summary       = %q{Extremely simple pagination using ajax}
-  spec.description   = %q{Designed to provide basic pagination functionality using ajax with minimal effort.  
-                          If you provide a JST(Javascript Template) file and a url to send requests to this gem will
-                          essentially do the rest.}
-  spec.homepage      = ""
+  spec.description   = %q{Designed to provide basic pagination functionality using ajax with minimal effort. If you provide a JST(Javascript Template) file and a url to send requests to this gem will essentially do the rest.}
+  spec.homepage      = "https://github.com/louism2/pagination_ajax"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -21,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency('jquery-rails')
+  spec.add_dependency('ejs')
   
   #spec.add_development_dependency 'rails'
   spec.add_development_dependency "bundler", "~> 1.6"
